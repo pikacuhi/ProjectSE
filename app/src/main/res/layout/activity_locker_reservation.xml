@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00AEEF"
+    tools:context=".LockerReservationActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:maxWidth="200dp"
+                    android:background="@drawable/search_bar_border"
+                    android:hint="@string/search_hint"
+                    android:inputType="text"
+                    android:textSize="11sp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:src="@drawable/notif_icon"
+                    android:layout_gravity="center_vertical"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="48dp"
+                    android:maxHeight="48dp"
+                    android:layout_marginStart="5dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:src="@drawable/profile_icon"
+                    android:layout_gravity="center_vertical"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="48dp"
+                    android:maxHeight="48dp"
+                    android:layout_marginStart="5dp"/>
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="25dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rectangle_bg1"
+                    android:layout_gravity="bottom" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="90dp"
+                    android:gravity="center">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rectangle_bg3"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="35dp"
+                            android:layout_marginEnd="35dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp">
+
+                                <TextView
+                                    android:id="@+id/locker_res_text"
+                                    android:layout_width="0dp"
+                                    android:layout_height="25dp"
+                                    android:text="@string/locker_res_text"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"
+                                    android:autoSizeTextType="uniform"
+                                    android:autoSizeMinTextSize="10dp"
+                                    android:autoSizeMaxTextSize="25dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintBottom_toTopOf="@id/search_station"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    android:gravity="center"/>
+
+                                <EditText
+                                    android:id="@+id/search_station"
+                                    android:layout_width="0dp"
+                                    android:layout_height="48dp"
+                                    android:hint="@string/search_station_hint"
+                                    android:layout_weight="1"
+                                    android:maxWidth="200dp"
+                                    android:background="@drawable/search_bar_border"
+                                    android:textSize="13sp"
+                                    android:paddingStart="8dp"
+                                    android:paddingEnd="8dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/locker_res_text"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginEnd="30dp"/>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </FrameLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:background="#C3C3C3"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginStart="35dp"
+                            android:layout_marginEnd="35dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/dki_jkt"
+                            android:layout_width="0dp"
+                            android:layout_height="36dp"
+                            android:text="@string/dki_jakarta_text"
+                            android:textSize="35sp"
+                            android:textColor="@color/black"
+                            android:autoSizeTextType="uniform"
+                            android:autoSizeMinTextSize="25dp"
+                            android:autoSizeMaxTextSize="35dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/change_state"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginStart="40dp"/>
+
+                        <TextView
+                            android:id="@+id/change_state"
+                            android:layout_width="0dp"
+                            android:layout_height="15dp"
+                            android:text="@string/change_state"
+                            android:textSize="14sp"
+                            android:textColor="@color/black"
+                            android:autoSizeTextType="uniform"
+                            android:autoSizeMinTextSize="8dp"
+                            android:autoSizeMaxTextSize="14dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="40dp"
+                            android:gravity="end"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:id="@+id/station1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rectangle_bg5"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="35dp"
+                            android:layout_marginEnd="35dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="20dp">
+
+                                <ImageView
+                                    android:id="@+id/station_img1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:src="@drawable/station1"
+                                    app:layout_constraintDimensionRatio="1.7:1"
+                                    app:layout_constraintEnd_toStartOf="@id/station_info1"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/station_info1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@id/station_img1"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <TextView
+                                        android:id="@+id/station_name1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="25dp"
+                                        android:text="@string/palmerah_station_text"
+                                        android:textColor="@color/white"
+                                        android:textSize="20sp"
+                                        android:autoSizeTextType="uniform"
+                                        android:autoSizeMinTextSize="15dp"
+                                        android:autoSizeMaxTextSize="20dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintBottom_toTopOf="@id/station_desc1"
+                                        app:layout_constraintEnd_toEndOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/station_desc1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/station_address1"
+                                        android:textColor="@color/white"
+                                        android:textSize="11sp"
+                                        android:autoSizeTextType="uniform"
+                                        android:autoSizeMinTextSize="6dp"
+                                        android:autoSizeMaxTextSize="11dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/station_name1"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        android:layout_marginEnd="5dp"/>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </FrameLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:id="@+id/station2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rectangle_bg5"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="35dp"
+                            android:layout_marginEnd="35dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="20dp">
+
+                                <ImageView
+                                    android:id="@+id/station_img2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:src="@drawable/station2"
+                                    app:layout_constraintDimensionRatio="1.7:1"
+                                    app:layout_constraintEnd_toStartOf="@id/station_info2"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/station_info2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@id/station_img2"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <TextView
+                                        android:id="@+id/station_name2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="25dp"
+                                        android:text="@string/jakarta_kota_station_text"
+                                        android:textColor="@color/white"
+                                        android:textSize="20sp"
+                                        android:autoSizeTextType="uniform"
+                                        android:autoSizeMinTextSize="15dp"
+                                        android:autoSizeMaxTextSize="20dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintBottom_toTopOf="@id/station_desc2"
+                                        app:layout_constraintEnd_toEndOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/station_desc2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/station_address2"
+                                        android:textColor="@color/white"
+                                        android:textSize="11sp"
+                                        android:autoSizeTextType="uniform"
+                                        android:autoSizeMinTextSize="6dp"
+                                        android:autoSizeMaxTextSize="11dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/station_name2"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        android:layout_marginEnd="5dp"/>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </FrameLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:id="@+id/station3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rectangle_bg5"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="35dp"
+                            android:layout_marginEnd="35dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="20dp">
+
+                                <ImageView
+                                    android:id="@+id/station_img3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:src="@drawable/station3"
+                                    app:layout_constraintDimensionRatio="1.7:1"
+                                    app:layout_constraintEnd_toStartOf="@id/station_info3"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/station_info3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@id/station_img3"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <TextView
+                                        android:id="@+id/station_name3"
+                                        android:layout_width="0dp"
+                                        android:layout_height="25dp"
+                                        android:text="@string/tanah_abang_station_text"
+                                        android:textColor="@color/white"
+                                        android:textSize="20sp"
+                                        android:autoSizeTextType="uniform"
+                                        android:autoSizeMinTextSize="15dp"
+                                        android:autoSizeMaxTextSize="20dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintBottom_toTopOf="@id/station_desc3"
+                                        app:layout_constraintEnd_toEndOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/station_desc3"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/station_address3"
+                                        android:textColor="@color/white"
+                                        android:textSize="11sp"
+                                        android:autoSizeTextType="uniform"
+                                        android:autoSizeMinTextSize="6dp"
+                                        android:autoSizeMaxTextSize="11dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/station_name3"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        android:layout_marginEnd="5dp"/>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </FrameLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:id="@+id/station4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rectangle_bg5"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="35dp"
+                            android:layout_marginEnd="35dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="20dp">
+
+                                <ImageView
+                                    android:id="@+id/station_img4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:src="@drawable/station4"
+                                    app:layout_constraintDimensionRatio="1.7:1"
+                                    app:layout_constraintEnd_toStartOf="@id/station_info4"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/station_info4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@id/station_img4"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <TextView
+                                        android:id="@+id/station_name4"
+                                        android:layout_width="0dp"
+                                        android:layout_height="25dp"
+                                        android:text="@string/sudirman_station_text"
+                                        android:textColor="@color/white"
+                                        android:textSize="20sp"
+                                        android:autoSizeTextType="uniform"
+                                        android:autoSizeMinTextSize="15dp"
+                                        android:autoSizeMaxTextSize="20dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintBottom_toTopOf="@id/station_desc4"
+                                        app:layout_constraintEnd_toEndOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/station_desc4"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/station_address4"
+                                        android:textColor="@color/white"
+                                        android:textSize="11sp"
+                                        android:autoSizeTextType="uniform"
+                                        android:autoSizeMinTextSize="6dp"
+                                        android:autoSizeMaxTextSize="11dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/station_name4"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        android:layout_marginEnd="5dp"/>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </FrameLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/rectangle_bg4"
+            android:layout_marginTop="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:id="@+id/nav_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/home_icon"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_text"
+                    android:textColor="#000000"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nav_history"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/history_icon"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/history_text"
+                    android:textColor="#000000"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/scanner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <View
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/circle_bg"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/scanner_icon"
+                        android:layout_gravity="center" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/scanner_text"
+                    android:textColor="#000000"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/cs_icon"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cs_text"
+                    android:textColor="#000000"
+                    android:layout_gravity="center"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/help_icon"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/help_text"
+                    android:textColor="#000000"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

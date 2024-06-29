@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00AEEF"
+    tools:context=".LostnFoundActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:maxWidth="200dp"
+                    android:background="@drawable/search_bar_border"
+                    android:hint="@string/search_hint"
+                    android:inputType="text"
+                    android:textSize="11sp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:src="@drawable/notif_icon"
+                    android:layout_gravity="center_vertical"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="48dp"
+                    android:maxHeight="48dp"
+                    android:layout_marginStart="5dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:src="@drawable/profile_icon"
+                    android:layout_gravity="center_vertical"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="48dp"
+                    android:maxHeight="48dp"
+                    android:layout_marginStart="5dp"/>
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="25dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rectangle_bg1"
+                    android:layout_gravity="bottom" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="90dp"
+                    android:gravity="center">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rectangle_bg3"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="35dp"
+                            android:layout_marginEnd="35dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp">
+
+                                <TextView
+                                    android:id="@+id/find_lost"
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp"
+                                    android:text="@string/find_lost"
+                                    android:textColor="@color/white"
+                                    android:textSize="25sp"
+                                    android:autoSizeTextType="uniform"
+                                    android:autoSizeMinTextSize="15dp"
+                                    android:autoSizeMaxTextSize="30dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintBottom_toTopOf="@id/report_items"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    android:gravity="center"/>
+
+                                <TextView
+                                    android:id="@+id/report_items"
+                                    android:layout_width="0dp"
+                                    android:layout_height="20dp"
+                                    android:text="@string/report_items"
+                                    android:textColor="@color/white"
+                                    android:textSize="13sp"
+                                    android:autoSizeTextType="uniform"
+                                    android:autoSizeMinTextSize="11dp"
+                                    android:autoSizeMaxTextSize="18dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/find_lost"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    android:gravity="center"
+                                    android:layout_marginTop="5dp"/>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </FrameLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="17dp">
+
+                        <TextView
+                            android:id="@+id/search_lost"
+                            android:layout_width="0dp"
+                            android:layout_height="25dp"
+                            android:text="@string/search_lost"
+                            android:textSize="20sp"
+                            android:textColor="@color/black"
+                            android:autoSizeTextType="uniform"
+                            android:autoSizeMinTextSize="15dp"
+                            android:autoSizeMaxTextSize="25dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/search_icon"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginStart="40dp"/>
+
+                        <ImageView
+                            android:id="@+id/search_icon"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/search_ic"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/search_lost"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:scaleType="fitCenter"
+                            android:layout_marginEnd="40dp"
+                            android:adjustViewBounds="true"
+                            app:layout_constraintWidth_percent="0.6"
+                            app:layout_constraintDimensionRatio="1:1"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rectangle_bg5"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="35dp"
+                            android:layout_marginEnd="35dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="20dp">
+
+                                <ImageView
+                                    android:id="@+id/item_img1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:src="@drawable/item1"
+                                    app:layout_constraintDimensionRatio="1.7:1"
+                                    app:layout_constraintEnd_toStartOf="@id/item1"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/item1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@id/item_img1"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <TextView
+                                        android:id="@+id/date_time1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/date_time1"
+                                        android:textColor="@color/white"
+                                        android:textSize="11sp"
+                                        android:autoSizeTextType="uniform"
+                                        android:autoSizeMinTextSize="8dp"
+                                        android:autoSizeMaxTextSize="12dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintBottom_toTopOf="@id/item_name1"
+                                        app:layout_constraintEnd_toEndOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/item_name1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="26dp"
+                                        android:text="@string/item_name1"
+                                        android:textColor="@color/white"
+                                        android:textSize="25sp"
+                                        android:autoSizeTextType="uniform"
+                                        android:autoSizeMinTextSize="20dp"
+                                        android:autoSizeMaxTextSize="25dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/date_time1"
+                                        app:layout_constraintEnd_toEndOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/item_desc1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/item_desc1"
+                                        android:textColor="@color/white"
+                                        android:textSize="11sp"
+                                        android:autoSizeTextType="uniform"
+                                        android:autoSizeMinTextSize="6dp"
+                                        android:autoSizeMaxTextSize="11dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/item_name1"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        android:layout_marginEnd="5dp"/>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </FrameLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rectangle_bg5"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="35dp"
+                            android:layout_marginEnd="35dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="20dp">
+
+                                <ImageView
+                                    android:id="@+id/item_img2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:src="@drawable/item2"
+                                    app:layout_constraintDimensionRatio="1.7:1"
+                                    app:layout_constraintEnd_toStartOf="@id/item2"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/item2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@id/item_img2"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <TextView
+                                        android:id="@+id/date_time2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/date_time2"
+                                        android:textColor="@color/white"
+                                        android:textSize="11sp"
+                                        android:autoSizeTextType="uniform"
+                                        android:autoSizeMinTextSize="8dp"
+                                        android:autoSizeMaxTextSize="12dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintBottom_toTopOf="@id/item_name2"
+                                        app:layout_constraintEnd_toEndOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/item_name2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="26dp"
+                                        android:text="@string/item_name2"
+                                        android:textColor="@color/white"
+                                        android:textSize="25sp"
+                                        android:autoSizeTextType="uniform"
+                                        android:autoSizeMinTextSize="20dp"
+                                        android:autoSizeMaxTextSize="25dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/date_time2"
+                                        app:layout_constraintEnd_toEndOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/item_desc2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/item_desc2"
+                                        android:textColor="@color/white"
+                                        android:textSize="11sp"
+                                        android:autoSizeTextType="uniform"
+                                        android:autoSizeMinTextSize="6dp"
+                                        android:autoSizeMaxTextSize="11dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/item_name2"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        android:layout_marginEnd="5dp"/>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </FrameLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rectangle_bg5"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="35dp"
+                            android:layout_marginEnd="35dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="20dp">
+
+                                <ImageView
+                                    android:id="@+id/item_img3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:src="@drawable/item3"
+                                    app:layout_constraintDimensionRatio="1.7:1"
+                                    app:layout_constraintEnd_toStartOf="@id/item3"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/item3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@id/item_img3"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <TextView
+                                        android:id="@+id/date_time3"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/date_time3"
+                                        android:textColor="@color/white"
+                                        android:textSize="11sp"
+                                        android:autoSizeTextType="uniform"
+                                        android:autoSizeMinTextSize="8dp"
+                                        android:autoSizeMaxTextSize="12dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintBottom_toTopOf="@id/item_name3"
+                                        app:layout_constraintEnd_toEndOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/item_name3"
+                                        android:layout_width="0dp"
+                                        android:layout_height="26dp"
+                                        android:text="@string/item_name3"
+                                        android:textColor="@color/white"
+                                        android:textSize="25sp"
+                                        android:autoSizeTextType="uniform"
+                                        android:autoSizeMinTextSize="20dp"
+                                        android:autoSizeMaxTextSize="25dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/date_time3"
+                                        app:layout_constraintEnd_toEndOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/item_desc3"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/item_desc3"
+                                        android:textColor="@color/white"
+                                        android:textSize="11sp"
+                                        android:autoSizeTextType="uniform"
+                                        android:autoSizeMinTextSize="6dp"
+                                        android:autoSizeMaxTextSize="11dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/item_name3"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        android:layout_marginEnd="5dp"/>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </FrameLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rectangle_bg5"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="35dp"
+                            android:layout_marginEnd="35dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="20dp">
+
+                                <ImageView
+                                    android:id="@+id/item_img4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:src="@drawable/item4"
+                                    app:layout_constraintDimensionRatio="1.7:1"
+                                    app:layout_constraintEnd_toStartOf="@id/item4"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/item4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@id/item_img4"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <TextView
+                                        android:id="@+id/date_time4"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/date_time4"
+                                        android:textColor="@color/white"
+                                        android:textSize="11sp"
+                                        android:autoSizeTextType="uniform"
+                                        android:autoSizeMinTextSize="8dp"
+                                        android:autoSizeMaxTextSize="12dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintBottom_toTopOf="@id/item_name4"
+                                        app:layout_constraintEnd_toEndOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/item_name4"
+                                        android:layout_width="0dp"
+                                        android:layout_height="26dp"
+                                        android:text="@string/item_name4"
+                                        android:textColor="@color/white"
+                                        android:textSize="25sp"
+                                        android:autoSizeTextType="uniform"
+                                        android:autoSizeMinTextSize="20dp"
+                                        android:autoSizeMaxTextSize="25dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/date_time4"
+                                        app:layout_constraintEnd_toEndOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/item_desc4"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/item_desc4"
+                                        android:textColor="@color/white"
+                                        android:textSize="11sp"
+                                        android:autoSizeTextType="uniform"
+                                        android:autoSizeMinTextSize="6dp"
+                                        android:autoSizeMaxTextSize="11dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/item_name4"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        android:layout_marginEnd="5dp"/>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </FrameLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/rectangle_bg4"
+            android:layout_marginTop="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:id="@+id/nav_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/home_icon"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_text"
+                    android:textColor="#000000"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nav_history"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/history_icon"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/history_text"
+                    android:textColor="#000000"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/scanner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <View
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/circle_bg"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/scanner_icon"
+                        android:layout_gravity="center" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/scanner_text"
+                    android:textColor="#000000"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/cs_icon"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cs_text"
+                    android:textColor="#000000"
+                    android:layout_gravity="center"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/help_icon"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/help_text"
+                    android:textColor="#000000"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

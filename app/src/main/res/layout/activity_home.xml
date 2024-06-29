@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00AEEF"
+    tools:context=".HomeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:maxWidth="200dp"
+                    android:background="@drawable/search_bar_border"
+                    android:hint="@string/search_hint"
+                    android:inputType="text"
+                    android:textSize="11sp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:src="@drawable/notif_icon"
+                    android:layout_gravity="center_vertical"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="48dp"
+                    android:maxHeight="48dp"
+                    android:layout_marginStart="5dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:src="@drawable/profile_icon"
+                    android:layout_gravity="center_vertical"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="48dp"
+                    android:maxHeight="48dp"
+                    android:layout_marginStart="5dp"/>
+            </LinearLayout>
+
+            <ViewFlipper
+                android:id="@+id/promoCarousel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="168dp"
+                    android:src="@drawable/promo1_img"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="168dp"
+                    android:src="@drawable/promo2_img"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="168dp"
+                    android:src="@drawable/promo3_img"/>
+
+            </ViewFlipper>
+
+            <LinearLayout
+                android:id="@+id/dotsLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="16dp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="bottom">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rectangle_bg1"
+                    android:layout_gravity="bottom" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="90dp"
+                    android:gravity="center">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:text="@string/feature_text"
+                            android:textSize="30sp"
+                            android:textColor="@color/black"
+                            android:autoSizeTextType="uniform"
+                            android:autoSizeMinTextSize="15dp"
+                            android:autoSizeMaxTextSize="35dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="20dp"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/lost_found"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="10dp">
+
+                            <ImageView
+                                android:id="@+id/lost_found_img"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/lost_found_img"
+                                android:scaleType="fitCenter"
+                                android:adjustViewBounds="true"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                app:layout_constraintWidth_percent="0.6"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/lost_found_text"
+                                android:textSize="14sp"
+                                android:autoSizeTextType="uniform"
+                                android:autoSizeMinTextSize="10dp"
+                                android:autoSizeMaxTextSize="14dp"
+                                android:textColor="#000000"
+                                android:gravity="center"
+                                app:layout_constraintTop_toBottomOf="@id/lost_found_img"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/parking"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="10dp">
+
+                            <ImageView
+                                android:id="@+id/parking_img"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/parking_img"
+                                android:scaleType="fitCenter"
+                                android:adjustViewBounds="true"
+                                app:layout_constraintDimensionRatio="1:1"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                app:layout_constraintWidth_percent="0.6"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/parking_text"
+                                android:textColor="#000000"
+                                android:gravity="center"
+                                app:layout_constraintTop_toBottomOf="@id/parking_img"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/locker"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="10dp">
+
+                            <ImageView
+                                android:id="@+id/locker_img"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/locker_img"
+                                android:scaleType="fitCenter"
+                                android:adjustViewBounds="true"
+                                app:layout_constraintDimensionRatio="1:1"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                app:layout_constraintWidth_percent="0.6"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/locker_text"
+                                android:textColor="#000000"
+                                android:gravity="center"
+                                app:layout_constraintTop_toBottomOf="@id/locker_img"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/lost_item"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="20dp">
+
+                            <ImageView
+                                android:id="@+id/lost_item_img"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/lost_item_img"
+                                android:scaleType="fitCenter"
+                                android:adjustViewBounds="true"
+                                app:layout_constraintDimensionRatio="1:1"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                app:layout_constraintWidth_percent="0.6"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/lost_item_text"
+                                android:textColor="#000000"
+                                android:gravity="center"
+                                app:layout_constraintTop_toBottomOf="@id/lost_item_img"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:background="#C3C3C3"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginEnd="25dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="115dp"
+                                android:background="@drawable/rectangle_bg2"
+                                android:layout_gravity="center"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/palmerah_station_text"
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp"
+                                    android:text="@string/palmerah_station_text"
+                                    android:textSize="25sp"
+                                    android:textColor="@color/white"
+                                    android:autoSizeTextType="uniform"
+                                    android:autoSizeMinTextSize="15dp"
+                                    android:autoSizeMaxTextSize="30dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@id/change_station_text"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginStart="35dp"/>
+
+                                <TextView
+                                    android:id="@+id/change_station_text"
+                                    android:layout_width="0dp"
+                                    android:layout_height="20dp"
+                                    android:text="@string/change_station_text"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/white"
+                                    android:autoSizeTextType="uniform"
+                                    android:autoSizeMinTextSize="8dp"
+                                    android:autoSizeMaxTextSize="18dp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="40dp"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <FrameLayout
+                                    android:id="@+id/parking_capacity"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintEnd_toStartOf="@+id/locker_capacity"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:background="@drawable/rectangle_bg3"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginStart="35dp"
+                                    android:layout_marginEnd="30dp">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginBottom="8dp">
+
+                                        <TextView
+                                            android:id="@+id/parking_capacity_text"
+                                            android:layout_width="0dp"
+                                            android:layout_height="20dp"
+                                            android:text="@string/parking_capacity_text"
+                                            android:textSize="15sp"
+                                            android:textColor="@color/white"
+                                            android:autoSizeTextType="uniform"
+                                            android:autoSizeMinTextSize="12dp"
+                                            android:autoSizeMaxTextSize="18dp"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toTopOf="@id/parking_capacity_numb"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            android:layout_marginTop="5dp"
+                                            android:gravity="center"/>
+
+                                        <View
+                                            android:layout_width="0dp"
+                                            android:layout_height="1dp"
+                                            android:background="#FFFFFF"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@id/parking_capacity_text"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            android:layout_marginTop="2dp"
+                                            android:layout_marginStart="25dp"
+                                            android:layout_marginEnd="25dp"/>
+
+                                        <TextView
+                                            android:id="@+id/parking_capacity_numb"
+                                            android:layout_width="0dp"
+                                            android:layout_height="20dp"
+                                            android:text="@string/parking_capacity_numb"
+                                            android:textSize="13sp"
+                                            android:textColor="@color/white"
+                                            android:autoSizeTextType="uniform"
+                                            android:autoSizeMinTextSize="8dp"
+                                            android:autoSizeMaxTextSize="18dp"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@id/parking_capacity_text"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            android:layout_marginTop="5dp"
+                                            android:gravity="center"/>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:id="@+id/locker_capacity"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/parking_capacity"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:background="@drawable/rectangle_bg3"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginEnd="35dp">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginBottom="8dp">
+
+                                        <TextView
+                                            android:id="@+id/locker_capacity_text"
+                                            android:layout_width="0dp"
+                                            android:layout_height="20dp"
+                                            android:text="@string/locker_capacity_text"
+                                            android:textSize="15sp"
+                                            android:textColor="@color/white"
+                                            android:autoSizeTextType="uniform"
+                                            android:autoSizeMinTextSize="12dp"
+                                            android:autoSizeMaxTextSize="18dp"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintBottom_toTopOf="@id/locker_capacity_numb"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            android:layout_marginTop="5dp"
+                                            android:gravity="center"/>
+
+                                        <View
+                                            android:layout_width="0dp"
+                                            android:layout_height="1dp"
+                                            android:background="#FFFFFF"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@id/locker_capacity_text"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            android:layout_marginTop="2dp"
+                                            android:layout_marginStart="25dp"
+                                            android:layout_marginEnd="25dp"/>
+
+                                        <TextView
+                                            android:id="@+id/locker_capacity_numb"
+                                            android:layout_width="0dp"
+                                            android:layout_height="20dp"
+                                            android:text="@string/locker_capacity_numb"
+                                            android:textSize="13sp"
+                                            android:textColor="@color/white"
+                                            android:autoSizeTextType="uniform"
+                                            android:autoSizeMinTextSize="8dp"
+                                            android:autoSizeMaxTextSize="18dp"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@id/locker_capacity_text"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            android:layout_marginTop="5dp"
+                                            android:gravity="center"/>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </FrameLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp">
+
+                        <FrameLayout
+                            android:id="@+id/parking_timer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rectangle_bg2"
+                            app:layout_constraintEnd_toStartOf="@id/locker_timer"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="3dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginBottom="10dp">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="28dp"
+                                        android:text="@string/parking_timer_text"
+                                        android:textColor="@color/white"
+                                        android:textSize="20sp"
+                                        android:autoSizeTextType="uniform"
+                                        android:autoSizeMinTextSize="15dp"
+                                        android:autoSizeMaxTextSize="25dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        android:gravity="center" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <FrameLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/rectangle_bg3"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        android:layout_marginTop="3dp"
+                                        android:layout_marginStart="35dp"
+                                        android:layout_marginEnd="35dp">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginBottom="10dp">
+
+                                            <TextView
+                                                android:layout_width="0dp"
+                                                android:layout_height="18dp"
+                                                android:text="@string/timer"
+                                                android:textColor="@color/white"
+                                                android:textSize="13sp"
+                                                android:autoSizeTextType="uniform"
+                                                android:autoSizeMinTextSize="10dp"
+                                                android:autoSizeMaxTextSize="15dp"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                android:gravity="center"/>
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+                                    </FrameLayout>
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </LinearLayout>
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/locker_timer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rectangle_bg2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/parking_timer"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginEnd="20dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginBottom="10dp">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/locker_timer_text"
+                                        android:textColor="@color/white"
+                                        android:textSize="20sp"
+                                        android:autoSizeTextType="uniform"
+                                        android:autoSizeMinTextSize="15dp"
+                                        android:autoSizeMaxTextSize="25dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        android:gravity="center" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <FrameLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/rectangle_bg3"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        android:layout_marginTop="3dp"
+                                        android:layout_marginStart="35dp"
+                                        android:layout_marginEnd="35dp">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginBottom="10dp">
+
+                                            <TextView
+                                                android:layout_width="0dp"
+                                                android:layout_height="18dp"
+                                                android:text="@string/timer"
+                                                android:textColor="@color/white"
+                                                android:textSize="13sp"
+                                                android:autoSizeTextType="uniform"
+                                                android:autoSizeMinTextSize="10dp"
+                                                android:autoSizeMaxTextSize="15dp"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                android:gravity="center"/>
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+                                    </FrameLayout>
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </LinearLayout>
+                        </FrameLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/rectangle_bg4"
+            android:layout_marginTop="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:id="@+id/nav_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/home_icon"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_text"
+                    android:textColor="#000000"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nav_history"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/history_icon"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/history_text"
+                    android:textColor="#000000"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/scanner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <View
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/circle_bg"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/scanner_icon"
+                        android:layout_gravity="center" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/scanner_text"
+                    android:textColor="#000000"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/cs_icon"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cs_text"
+                    android:textColor="#000000"
+                    android:layout_gravity="center"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/help_icon"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/help_text"
+                    android:textColor="#000000"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

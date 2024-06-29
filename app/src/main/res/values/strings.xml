@@ -1,0 +1,107 @@
+<resources>
+    <string name="app_name">KRLPark</string>
+
+    <string name="login_text"><b>LOGIN</b></string>
+    <string name="register_text"><b>REGISTER</b></string>
+    <string name="email_text">Email</string>
+    <string name="password_text">Password</string>
+    <string name="confirm_password_text">Confirm Password</string>
+    <string name="phone_number_text">Phone Number</string>
+    <string name="email_hint">Type your Email</string>
+    <string name="password_hint">Type your Password</string>
+    <string name="confirm_password_hint">Confirm your Password</string>
+    <string name="phone_number_hint">Type your Phone Number</string>
+    <string name="search_hint">Search\u2026</string>
+    <string name="forgot_password"><u>Forgot Password</u></string>
+    <string name="login_button">Login</string>
+    <string name="register_button">Register</string>
+    <string name="sign_up">Don\'t have an account? Sign Up!</string>
+    <string name="already_hv_acc">Already have an account? Login Now!</string>
+    <string name="tnc_checkbox">Agree to terms &amp; conditions</string>
+
+    <string name="home_text">Home</string>
+    <string name="history_text">History</string>
+    <string name="scanner_text">Scanner</string>
+    <string name="cs_text">Customer Service</string>
+    <string name="help_text">Help</string>
+
+    <string name="feature_text"><b>Feature</b></string>
+    <string name="lost_found_text">Lost &amp; Found</string>
+    <string name="parking_text">Parking Reservation</string>
+    <string name="locker_text">Locker Reservation</string>
+    <string name="lost_item_text">Report Lost Item</string>
+    <string name="palmerah_station_text"><b>Palmerah Station</b></string>
+    <string name="change_station_text"><u>Change Station</u></string>
+    <string name="parking_capacity_text"><b>Parking Capacity</b></string>
+    <string name="locker_capacity_text"><b>Locker Capacity</b></string>
+    <string name="parking_capacity_numb">50/200</string>
+    <string name="locker_capacity_numb">75/150</string>
+    <string name="parking_timer_text"><b>Parking Timer</b></string>
+    <string name="locker_timer_text"><b>Locker Timer</b></string>
+    <string name="timer"><b>00:00:00</b></string>
+
+
+    <string name="find_lost"><b>Find a Lost Item?</b></string>
+    <string name="report_items"><u>Report items</u></string>
+    <string name="search_lost"><b>Search for lost items</b></string>
+    <string name="date_time1">15 Mei / 10:00</string>
+    <string name="item_name1"><b>Tas Hitam</b></string>
+    <string name="item_desc1">Tas selempang warna hitam, berlogo "Public".</string>
+    <string name="date_time2">15 Mei / 12:00</string>
+    <string name="item_name2"><b>Tas Biru Dongker</b></string>
+    <string name="item_desc2">Tas dengan warna biru dongker, polos dan mempunyai tali selempang</string>
+    <string name="date_time3">16 Mei / 15:00</string>
+    <string name="item_name3"><b>Botol Tutup Biru Muda</b></string>
+    <string name="item_desc3">Botol dengan tutup warna biru muda dan karet warna oren berada di leher botol</string>
+    <string name="date_time4">17 Mei / 14:00</string>
+    <string name="item_name4"><b>Botol Tutup Hitam</b></string>
+    <string name="item_desc4">Botol dengan tutup warna hitam polos</string>
+
+    <string name="parking_res_text"><b>Parking Reservation</b></string>
+    <string name="search_station_hint">Search Station Name</string>
+    <string name="dki_jakarta_text"><b>DKI JAKARTA</b></string>
+    <string name="change_state"><u>Change State</u></string>
+    <string name="alert_text">Select an available space and scan the barcode of the parking space.</string>
+    <string name="close_alert_text"><u>Click anywhere to close</u></string>
+
+    <string name="station_address1">Jalan Palmerah Timur Gelora, Tanah Abang, Jakarta Pusat, DKI Jakarta, 10270</string>
+    <string name="jakarta_kota_station_text"><b>Jakarta Kota Station</b></string>
+    <string name="station_address2">Jalan Stasiun Kota No. 1 Pinangsia, Taman Sari, Jakarta Barat, 11110</string>
+    <string name="tanah_abang_station_text"><b>Tanah Abang Station</b></string>
+    <string name="station_address3">Jalan Jatibaru Raya Kampung Bali, Tanah Abang, Jakarta Pusat, 10250</string>
+    <string name="sudirman_station_text"><b>Sudirman Station</b></string>
+    <string name="station_address4">Jalan Kendal 1 Menteng, Menteng, Jakarta Pusat, 10310</string>
+
+    <string name="locker_res_text"><b>Locker Reservation</b></string>
+    <string name="change_location"><u>Change Location</u></string>
+    <string name="locker_count_text"><b>Locker Count</b></string>
+    <string name="available_locker_text"><b>Available Lockers</b></string>
+    <string name="locker_count_numb"><b>150</b></string>
+    <string name="available_locker_numb"><b>75</b></string>
+    <string name="locker_in_use"><b>Locker code currently in use</b></string>
+    <string name="pal_code"><b>PAL001</b></string>
+    <string name="jkt_code"><b>JKT001</b></string>
+    <string name="tna_code"><b>TNA001</b></string>
+    <string name="sdm_code"><b>SDM001</b></string>
+    <string name="end_reservation_text"><b><u>End the reservation</u></b></string>
+    <string name="reservation_completed_text"><b><u>Reservation completed</u></b></string>
+
+    <string name="name">Name:</string>
+    <string name="phone_number">Phone Number:</string>
+    <string name="item_type">Item Type:</string>
+    <string name="name_hint">Type your Name</string>
+    <string name="item_type_hint">Type the Item Type</string>
+    <string name="submit_button">Submit</string>
+    <string name="thank_you_text">Thank You!</string>
+
+    <string name="ongoing_res_text"><b>Ongoing Reservation</b></string>
+    <string name="completed_res_text"><b>Completed Reservation</b></string>
+    <string name="month_year1"><b>August - 2024</b></string>
+    <string name="month_year2"><b>July - 2024</b></string>
+    <string name="ongoing_time">20 - September - 2024</string>
+    <string name="history_time1">16 - August - 2024</string>
+    <string name="history_time2">07 - August - 2024</string>
+    <string name="history_time3">28 - July - 2024</string>
+    <string name="history_time4">10 - July - 2024</string>
+    <string name="view_detail"><u>View Detail</u></string>
+</resources>
